@@ -21,7 +21,6 @@ export default {
       console.log(this.nameOfNewGallery.length);
       if (typeof this.nameOfNewGallery === "string" && this.nameOfNewGallery.length >= 1) {
         this.addNewGallery();
-        console.log("yes");
       } else {
         alert("Názov galérie je povinné pole. Názov galérie musí byť string s minimálnou dĺžkou 1");
       }
@@ -30,7 +29,6 @@ export default {
       this.$http.post("http://api.programator.sk/gallery", {
         name: this.nameOfNewGallery
       }).then(response => {
-        console.log("Gallery added");
         this.$router.go();
       }, response => {
         if (response.status == 409) {
