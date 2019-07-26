@@ -17,8 +17,6 @@
 export default {
   methods: {
     checkForm: function() {
-      console.log(typeof this.nameOfNewGallery);
-      console.log(this.nameOfNewGallery.length);
       if (typeof this.nameOfNewGallery === "string" && this.nameOfNewGallery.length >= 1) {
         this.addNewGallery();
       } else {
